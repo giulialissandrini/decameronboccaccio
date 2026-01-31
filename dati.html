@@ -45,10 +45,11 @@
       </div>
     </div>
 
-  <div class="conteiner-fluid">
+  <div class="conteiner">
      <table class="table table-striped">
         <thead>
           <!-- intestazioni -->
+          
         </thead>
         <tbody id="table-body"></tbody>
       </table>
@@ -78,8 +79,11 @@
         tbody.innerHTML += `
           <tr>
             <td>${row.Giornata}</td>
+            <td>${row.Tema}</td>
             <td>${row.Narratore}</td>
             <td>${row.Novella}</td>
+            <td>${row.Personaggi}</td>
+            <td>${row.Luoghi}</td>
           </tr>`;
       });
     }
@@ -89,3 +93,6 @@
 </html>
 
 
+
+
+<td>${row.Giornata}</td>
