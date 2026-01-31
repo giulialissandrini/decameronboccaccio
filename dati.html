@@ -65,6 +65,8 @@
   Papa.parse("decameron_tutte_le_100_novelle.csv", {
     download: true,
     header: true,
+    delimiter: ";",
+    skipEmptyLines: true,
     complete: function(results) {
       const tbody = document.getElementById("table-body");
       results.data.forEach(row => {
