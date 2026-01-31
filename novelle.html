@@ -1,0 +1,420 @@
+﻿<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Novelle di Boccaccio</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="index.html">Boccaccio Novelle</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="##">Decameron</a></li>
+          <li class="nav-item"><a class="nav-link" href="novelle.html">Novelle</a></li>
+          <li class="nav-item"><a class="nav-link" href="##">Narratori</a></li>
+          <li class="nav-item"><a class="nav-link" href="dati.html">Dati</a></li>
+          <!---<li class="nav-item"><a class="nav-link" href="#contatti">Contatti</a></li>--->
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <nav aria-label="breadcrumb" id="breadcrumb-nav">
+    <div class="container-fluid text-center">
+      <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+        <li class="breadcrumb-item active" aria-current="page">Novelle</li>
+      </ol>
+    </div>
+  </nav>
+
+  <!-- Intro -->
+  <div class="container my-5">
+    <div class="intro">
+      <h1>Tutte le novelle</h1>
+      <p>
+        Boccaccio racconta di una brigata di dieci giovani amici (sette ragazze e tre ragazzi) di elevata condizione sociale che fuggono dalla città di Firenze colpita dalla peste del 1348. Per trascorrere il tempo oltre ad altre attività come canti e balli decidono di narrare, secondo delle regole rigide, delle novelle. <br> <br>
+        Ogni giorno, a turno, viene eletto un re o una regina, che fissa il tema della giornata al quale tutti dovranno ispirarsi per i loro racconti (tranne Dioneo a cui, essendo giovane, è permesso di non rispettare il tema stabilito). Solo la prima e la nona giornata hanno un tema libero per tutti.<br>
+        [Quindi sono 10 giovani che raccontano ciascuno una novella al giorno (10 giornate)=100 novelle. Ogni giorno c’è un re/regina che sceglie il tema]
+      </p>
+    </div>
+  </div>
+
+
+  <!-- Opere in evidenza -->
+  <div class="container mb-5" id="opere">
+    <div class="row">
+      <div class="col-sm-12">
+        <!-- ricerca per:
+            text titolo, select giornata, select tema
+        -->
+        <form class="mb-4" id="searchForm">
+          <div class="row g-2 align-items-end">
+            <div class="col-12 col-md-4">
+              <label for="searchTitolo" class="form-label">Titolo</label>
+              <input type="text" class="form-control" id="searchTitolo" name="titolo" placeholder="Cerca per titolo">
+            </div>
+            <div class="col-6 col-md-2">
+              <label for="searchGiornata" class="form-label">Giornata</label>
+              <select class="form-select" id="searchGiornata" name="giornata">
+                <option value="">Tutte</option>
+                <option value="1">Giornata I</option>
+                <option value="2">Giornata II</option>
+                <option value="3">Giornata III</option>
+                <option value="4">Giornata IV</option>
+                <option value="5">Giornata V</option>
+                <option value="6">Giornata VI</option>
+                <option value="7">Giornata VII</option>
+                <option value="8">Giornata VIII</option>
+                <option value="9">Giornata IX</option>
+                <option value="10">Giornata X</option>
+              </select>
+            </div>
+            <div class="col-6 col-md-2">
+              <label for="searchTema" class="form-label">Narratore</label>
+              <select class="form-select" id="searchTema" name="tema">
+                <option value="">Tutti</option>
+                <option value="Dioneo">Dioneo</option>
+                <option value="Elissa">Elissa</option>
+                <option value="Emilia">Emilia</option>
+                <option value="Fiammetta">Fiammetta</option>
+                <option value="Filomena">Filomena</option>
+                <option value="Filostrato">Filostrato</option>
+                <option value="Lauretta">Lauretta</option>
+                <option value="Neifile">Neifile</option>
+                <option value="Pampinea">Pampinea</option>
+                <option value="Panfilo">Panfilo</option>
+              </select>
+            </div>
+            <div class="col-12 col-md-2">
+              <label for="searchTema" class="form-label">Tema</label>
+              <select class="form-select" id="searchTema" name="tema">
+                <option value="">Tutti</option>
+                <option value="Amori felici">Amori felici</option>
+                <option value="Amori infelici">Amori infelici</option>
+                <option value="Beffe">Beffe</option>
+                <option value="Beffe delle mogli">Beffe delle mogli</option>                
+                <option value="Esempi di magnificenza">Esempi di magnificenza</option>
+                <option value="Fortuna">Fortuna</option>
+                <option value="Industria">Industria</option>                
+                <option value="Motti di spirito">Motti di spirito</option>
+                <option value="Tema Libero">Tema Libero</option>
+              </select>
+            </div>
+            <div class="col-12 col-md-2 d-grid">
+              <button type="submit" class="btn btn-primary">Cerca</button>
+            </div>
+          </div>
+        </form>
+        
+        
+
+        <!-- <div class="mb-4 text-center">
+          <a href="##" class="badge text-bg-secondary">GIORNATA I</a>
+          <a href="##" class="badge text-bg-secondary">GIORNATA II</a>
+          <a href="##" class="badge text-bg-secondary">GIORNATA III</a>
+          <a href="##" class="badge text-bg-secondary">GIORNATA IV</a>
+          <a href="##" class="badge text-bg-secondary">GIORNATA V</a>
+          <a href="##" class="badge text-bg-secondary">GIORNATA VI</a>
+          <a href="##" class="badge text-bg-secondary">GIORNATA VII</a>
+          <a href="##" class="badge text-bg-secondary">GIORNATA VIII</a>
+          <a href="##" class="badge text-bg-secondary">GIORNATA IX</a>
+          <a href="##" class="badge text-bg-secondary">GIORNATA X</a>
+        </div> -->
+      </div>
+      <div class="col-sm-12">
+        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-5 featured-works">
+          <!-- Opere placeholder -->
+          <div class="col mb-5">        
+              <div class="card h-100">
+                  <a href="novella.html"><img src="https://placehold.co/400x250/364652/ffffff/?text=Ser+Ciappelletto" class="card-img-top" alt="Ser Ciappelletto"></a>
+                  <div class="card-body">
+                  <a href="novella.html">
+                    <h6 class="card-subtitle mb-2 text-muted">
+                      <span class="badge text-bg-secondary">GIORNATA I</span>
+                      <span class="badge text-bg-secondary">TEMA LIBERO</span>
+                    </h6>
+                    <h5 class="card-title">Ser Ciappelletto</h5>
+                    <p class="card-text">Testo descrittivo placeholder della novella Ser Ciappelletto.</p>
+                  </a>
+                </div>
+              </div>
+          </div>
+          <div class="col mb-5">
+            <div class="card h-100">
+              <a href="##"><img src="https://placehold.co/400x250/364652/ffffff/?text=Abraam+giudeo" class="card-img-top" alt="Abraam giudeo"></a>
+              <div class="card-body">
+                <a href="##">
+                  <h6 class="card-subtitle mb-2 text-muted"><span class="badge text-bg-secondary">GIORNATA I</span> <span class="badge text-bg-secondary">TEMA LIBERO</span></h6>
+                  <h5 class="card-title">Abraam giudeo</h5>
+                  <p class="card-text">Testo descrittivo placeholder della novella Abraam giudeo.</p>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="col mb-5">
+            <div class="card h-100">
+              <a href="##"><img src="https://placehold.co/400x250/364652/ffffff/?text=Melchisedech+e+la+questione+dei+tre+anelli" class="card-img-top" alt="Melchisedech e la questione dei tre anelli"></a>
+                <div class="card-body">
+                  <a href="##">
+                  <h6 class="card-subtitle mb-2 text-muted"><span class="badge text-bg-secondary">GIORNATA I</span> <span class="badge text-bg-secondary">TEMA LIBERO</span></h6>
+                  <h5 class="card-title">Melchisedech e la questione dei tre anelli</h5>
+                  <p class="card-text">Testo descrittivo placeholder della novella di Melchisedech.</p>
+                  </a>
+                </div>            
+            </div>
+          </div>
+          <div class="col mb-5">
+            <div class="card h-100">
+              <a href="##"><img src="https://placehold.co/400x250/364652/ffffff/?text=Il+monaco+e+l%27abate" class="card-img-top" alt="Il monaco e l'abate"></a>
+                <div class="card-body">
+                  <a href="##">
+                  <h6 class="card-subtitle mb-2 text-muted"><span class="badge text-bg-secondary">GIORNATA I</span> <span class="badge text-bg-secondary">TEMA LIBERO</span></h6>
+                  <h5 class="card-title">Il monaco e l'abate</h5>
+                  <p class="card-text">Testo descrittivo placeholder della novella del monaco e dell'abate.</p>
+                  </a>
+                </div>            
+            </div>
+          </div>
+          <div class="col mb-5">
+            <div class="card h-100">
+              <a href="##"><img src="https://placehold.co/400x250/364652/ffffff/?text=La+marchesa+di+Monferrato" class="card-img-top" alt="La marchesa di Monferrato"></a>
+                <div class="card-body">
+                  <a href="##">
+                  <h6 class="card-subtitle mb-2 text-muted"><span class="badge text-bg-secondary">GIORNATA I</span> <span class="badge text-bg-secondary">TEMA LIBERO</span></h6>
+                  <h5 class="card-title">La marchesa di Monferrato</h5>
+                  <p class="card-text">Testo descrittivo placeholder della novella della marchesa di Monferrato.</p>
+                  </a>
+                </div>            
+            </div>
+          </div>
+          <div class="col mb-5">        
+              <div class="card h-100">
+                  <a href="##"><img src="https://placehold.co/400x250/364652/ffffff/?text=Il+re+di+Francia+e+la+donna+gentile" class="card-img-top" alt="Il re di Francia e la donna gentile"></a>
+                  <div class="card-body">
+                  <a href="##">
+                    <h6 class="card-subtitle mb-2 text-muted">
+                      <span class="badge text-bg-secondary">GIORNATA I</span> <span class="badge text-bg-secondary">TEMA LIBERO</span></h6>
+                    <h5 class="card-title">Il re di Francia e la donna gentile</h5>
+                    <p class="card-text">Testo descrittivo placeholder della novella del re di Francia.</p>
+                  </a>
+                </div>
+              </div>
+          </div>
+          <div class="col mb-5">
+            <div class="card h-100">
+              <a href="##"><img src="https://placehold.co/400x250/364652/ffffff/?text=Bergamino+e+Primasso" class="card-img-top" alt="Bergamino e Primasso"></a>
+              <div class="card-body">
+                <a href="##">
+                  <h6 class="card-subtitle mb-2 text-muted"><span class="badge text-bg-secondary">GIORNATA I</span> <span class="badge text-bg-secondary">TEMA LIBERO</span></h6>
+                  <h5 class="card-title">Bergamino e Primasso</h5>
+                  <p class="card-text">Testo descrittivo placeholder della novella di Bergamino.</p>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="col mb-5">
+            <div class="card h-100">
+              <a href="##"><img src="https://placehold.co/400x250/364652/ffffff/?text=Guglielmo+Borsiere" class="card-img-top" alt="Guglielmo Borsiere"></a>
+                <div class="card-body">
+                  <a href="##">
+                  <h6 class="card-subtitle mb-2 text-muted"><span class="badge text-bg-secondary">GIORNATA I</span> <span class="badge text-bg-secondary">TEMA LIBERO</span></h6>
+                  <h5 class="card-title">Guglielmo Borsiere</h5>
+                  <p class="card-text">Testo descrittivo placeholder della novella di Guglielmo Borsiere.</p>
+                  </a>
+                </div>            
+            </div>
+          </div>
+          <div class="col mb-5">
+            <div class="card h-100">
+              <a href="##"><img src="https://placehold.co/400x250/364652/ffffff/?text=Il+re+di+Cipro" class="card-img-top" alt="Il re di Cipro"></a>
+                <div class="card-body">
+                  <a href="##">
+                  <h6 class="card-subtitle mb-2 text-muted"><span class="badge text-bg-secondary">GIORNATA I</span> <span class="badge text-bg-secondary">TEMA LIBERO</span></h6>
+                  <h5 class="card-title">Il re di Cipro</h5>
+                  <p class="card-text">Testo descrittivo placeholder della novella del re di Cipro.</p>
+                  </a>
+                </div>            
+            </div>
+          </div>
+          <div class="col mb-5">
+            <div class="card h-100">
+              <a href="##"><img src="https://placehold.co/400x250/364652/ffffff/?text=Maestro+Alberto+da+Bologna" class="card-img-top" alt="Maestro Alberto da Bologna"></a>
+                <div class="card-body">
+                  <a href="##">
+                  <h6 class="card-subtitle mb-2 text-muted"><span class="badge text-bg-secondary">GIORNATA I</span> <span class="badge text-bg-secondary">TEMA LIBERO</span></h6>
+                  <h5 class="card-title">Maestro Alberto da Bologna</h5>
+                  <p class="card-text">Testo descrittivo placeholder della novella di Maestro Alberto.</p>
+                  </a>
+                </div>            
+            </div>
+          </div>
+          <!-- Novelle GIORNATA II -->
+          <div class="col mb-5">
+            <div class="card h-100">
+              <a href="##"><img src="https://placehold.co/400x250/364652/ffffff/?text=Martellino" class="card-img-top" alt="Martellino"></a>
+              <div class="card-body">
+                <a href="##">
+                  <h6 class="card-subtitle mb-2 text-muted"><span class="badge text-bg-secondary">GIORNATA II</span> <span class="badge text-bg-secondary">FORTUNA</span></h6>
+                  <h5 class="card-title">Martellino</h5>
+                  <p class="card-text">Testo descrittivo placeholder della novella di Martellino.</p>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="col mb-5">
+            <div class="card h-100">
+              <a href="##"><img src="https://placehold.co/400x250/364652/ffffff/?text=Rinaldo+d%27Asti" class="card-img-top" alt="Rinaldo d'Asti"></a>
+              <div class="card-body">
+                <a href="##">
+                  <h6 class="card-subtitle mb-2 text-muted"><span class="badge text-bg-secondary">GIORNATA II</span> <span class="badge text-bg-secondary">FORTUNA</span></h6>
+                  <h5 class="card-title">Rinaldo d'Asti</h5>
+                  <p class="card-text">Testo descrittivo placeholder della novella di Rinaldo d'Asti.</p>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="col mb-5">
+            <div class="card h-100">
+              <a href="##"><img src="https://placehold.co/400x250/364652/ffffff/?text=Andreuccio+da+Perugia" class="card-img-top" alt="Andreuccio da Perugia"></a>
+              <div class="card-body">
+                <a href="##">
+                  <h6 class="card-subtitle mb-2 text-muted"><span class="badge text-bg-secondary">GIORNATA II</span> <span class="badge text-bg-secondary">FORTUNA</span></h6>
+                  <h5 class="card-title">Andreuccio da Perugia</h5>
+                  <p class="card-text">Testo descrittivo placeholder della novella di Andreuccio da Perugia.</p>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="col mb-5">
+            <div class="card h-100">
+              <a href="##"><img src="https://placehold.co/400x250/364652/ffffff/?text=Landolfo+Rufolo" class="card-img-top" alt="Landolfo Rufolo"></a>
+              <div class="card-body">
+                <a href="##">
+                  <h6 class="card-subtitle mb-2 text-muted"><span class="badge text-bg-secondary">GIORNATA II</span> <span class="badge text-bg-secondary">FORTUNA</span></h6>
+                  <h5 class="card-title">Landolfo Rufolo</h5>
+                  <p class="card-text">Testo descrittivo placeholder della novella di Landolfo Rufolo.</p>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="col mb-5">
+            <div class="card h-100">
+              <a href="##"><img src="https://placehold.co/400x250/364652/ffffff/?text=Andreuola+e+Gabriotto" class="card-img-top" alt="Andreuola e Gabriotto"></a>
+              <div class="card-body">
+                <a href="##">
+                  <h6 class="card-subtitle mb-2 text-muted"><span class="badge text-bg-secondary">GIORNATA II</span> <span class="badge text-bg-secondary">FORTUNA</span></h6>
+                  <h5 class="card-title">Andreuola e Gabriotto</h5>
+                  <p class="card-text">Testo descrittivo placeholder della novella di Andreuola e Gabriotto.</p>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="col mb-5">
+            <div class="card h-100">
+              <a href="##"><img src="https://placehold.co/400x250/364652/ffffff/?text=Madonna+Beritola" class="card-img-top" alt="Madonna Beritola"></a>
+              <div class="card-body">
+                <a href="##">
+                  <h6 class="card-subtitle mb-2 text-muted"><span class="badge text-bg-secondary">GIORNATA II</span> <span class="badge text-bg-secondary">FORTUNA</span></h6>
+                  <h5 class="card-title">Madonna Beritola</h5>
+                  <p class="card-text">Testo descrittivo placeholder della novella di Madonna Beritola.</p>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="col mb-5">
+            <div class="card h-100">
+              <a href="##"><img src="https://placehold.co/400x250/364652/ffffff/?text=Alatiel" class="card-img-top" alt="Alatiel"></a>
+              <div class="card-body">
+                <a href="##">
+                  <h6 class="card-subtitle mb-2 text-muted"><span class="badge text-bg-secondary">GIORNATA II</span> <span class="badge text-bg-secondary">FORTUNA</span></h6>
+                  <h5 class="card-title">Alatiel</h5>
+                  <p class="card-text">Testo descrittivo placeholder della novella di Alatiel.</p>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="col mb-5">
+            <div class="card h-100">
+              <a href="##"><img src="https://placehold.co/400x250/364652/ffffff/?text=Il+conte+d%27Anguersa" class="card-img-top" alt="Il conte d'Anguersa"></a>
+              <div class="card-body">
+                <a href="##">
+                  <h6 class="card-subtitle mb-2 text-muted"><span class="badge text-bg-secondary">GIORNATA II</span> <span class="badge text-bg-secondary">FORTUNA</span></h6>
+                  <h5 class="card-title">Il conte d'Anguersa</h5>
+                  <p class="card-text">Testo descrittivo placeholder della novella del conte d'Anguersa.</p>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="col mb-5">
+            <div class="card h-100">
+              <a href="##"><img src="https://placehold.co/400x250/364652/ffffff/?text=Bernab%C3%B2+da+Genova" class="card-img-top" alt="Bernabò da Genova"></a>
+              <div class="card-body">
+                <a href="##">
+                  <h6 class="card-subtitle mb-2 text-muted"><span class="badge text-bg-secondary">GIORNATA II</span> <span class="badge text-bg-secondary">FORTUNA</span></h6>
+                  <h5 class="card-title">Bernabò da Genova</h5>
+                  <p class="card-text">Testo descrittivo placeholder della novella di Bernabò da Genova.</p>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="col mb-5">
+            <div class="card h-100">
+              <a href="##"><img src="https://placehold.co/400x250/364652/ffffff/?text=Paganino+e+Ricciardo" class="card-img-top" alt="Paganino e Ricciardo"></a>
+              <div class="card-body">
+                <a href="##">
+                  <h6 class="card-subtitle mb-2 text-muted"><span class="badge text-bg-secondary">GIORNATA II</span> <span class="badge text-bg-secondary">FORTUNA</span></h6>
+                  <h5 class="card-title">Paganino e Ricciardo</h5>
+                  <p class="card-text">Testo descrittivo placeholder della novella di Paganino e Ricciardo.</p>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>    
+  </div>
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-12">
+        <nav aria-label="Page navigation example">
+            <ul class="pagination">
+              <li class="page-item">
+                <a class="page-link" href="#" aria-label="Previous">
+                  <span aria-hidden="true">&laquo;</span>
+                </a>
+              </li>
+              <li class="page-item"><a class="page-link" href="#">1</a></li>
+              <li class="page-item"><a class="page-link" href="#">2</a></li>
+              <li class="page-item"><a class="page-link" href="#">3</a></li>
+              <li class="page-item">
+                <a class="page-link" href="#" aria-label="Next">
+                  <span aria-hidden="true">&raquo;</span>
+                </a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </div>
+
+  <!-- Footer -->
+  <footer class="text-center">
+    <div class="container">
+      <p>&copy; 2026 Novelle di Boccaccio. Tutti i diritti riservati.</p>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
