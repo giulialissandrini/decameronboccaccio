@@ -21,4 +21,4 @@ footer { background: #343a40; color: #fff; padding: 1rem 0; margin-top: 2rem; }
 .accordion-button:not(.collapsed) { background-color: #f8f9fa; color: #7B0828; }
 .accordion-body{ background-color: #fff; color: #333; }
 
-a.footer {color:#fff !important};
+a.footer {color:#fff !important}
