@@ -1,3 +1,4 @@
+
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,wght,XOPQ,XTRA,YOPQ,YTDE,YTFI,YTLC,YTUC@8..144,100..1000,96,468,79,-203,738,514,712&display=swap');
 body { font-family: 'Roboto Flex', sans-serif; background-color: #ffffff; color: #333; }
 body a, .page-link, .page-item{ text-decoration: none; color: #7B0828;}
@@ -19,3 +20,5 @@ footer { background: #343a40; color: #fff; padding: 1rem 0; margin-top: 2rem; }
 .accordion-button{ background-color: #f8f9fa; color: #7B0828; }
 .accordion-button:not(.collapsed) { background-color: #f8f9fa; color: #7B0828; }
 .accordion-body{ background-color: #fff; color: #333; }
+
+a.footer {color:#fff !important};
