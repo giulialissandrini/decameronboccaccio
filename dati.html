@@ -43,25 +43,12 @@
       <div class="intro">
         <h1>Dati</h1>
 
-        <script src="https://cdn.jsdelivr.net/npm/papaparse@5.4.1/papaparse.min.js"></script>
-        <script>
-        Papa.parse("decameron_tutte_le_100_novelle.csv", {
-          download: true,
-          header: true,
-          complete: function(results) {
-            const tbody = document.getElementById("table-body");
-            results.data.forEach(row => {
-              tbody.innerHTML += `
-                <tr>
-                  <td>${row.Giornata}</td>
-                  <td>${row.Narratore}</td>
-                  <td>${row.Novella}</td>
-                </tr>`;
-            });
-          }
-        });
-        </script>
-
+        <table class="table table-striped">
+        <thead>
+          <!-- intestazioni -->
+        </thead>
+        <tbody id="table-body"></tbody>
+      </table>
       </div>
     </div>
    
@@ -72,9 +59,24 @@
       <p>&copy; 2026 Novelle di Boccaccio. Tutti i diritti riservati.</p>
     </div>
   </footer>
-
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/papaparse@5.4.1/papaparse.min.js"></script>
+  <script>
+  Papa.parse("decameron_tutte_le_100_novelle.csv", {
+    download: true,
+    header: true,
+    complete: function(results) {
+      const tbody = document.getElementById("table-body");
+      results.data.forEach(row => {
+        tbody.innerHTML += `
+          <tr>
+            <td>${row.Giornata}</td>
+            <td>${row.Narratore}</td>
+            <td>${row.Novella}</td>
+          </tr>`;
+      });
+    }
+  });
+  </script>
 </body>
-
 </html>
-
