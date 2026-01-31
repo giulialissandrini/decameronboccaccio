@@ -67,6 +67,9 @@
     header: true,
     delimiter: ";",
     skipEmptyLines: true,
+    transformHeader: function(header) {
+      return header.trim().replace(/^\uFEFF/, "");
+    },
     complete: function(results) {
       const tbody = document.getElementById("table-body");
       results.data.forEach(row => {
@@ -82,3 +85,4 @@
   </script>
 </body>
 </html>
+
