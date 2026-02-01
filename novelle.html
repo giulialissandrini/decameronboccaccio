@@ -1,34 +1,62 @@
 ﻿<!DOCTYPE html>
+<!-- Dichiarazione del tipo di documento HTML5 -->
 <html lang="it">
+<!-- Inizio documento HTML con lingua italiana -->
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Novelle di Boccaccio</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <!-- Metadati di base -->
+  <meta charset="UTF-8"> <!-- Codifica dei caratteri -->
+  <meta name="viewport" content="width=device-width, initial-scale=1"> <!-- Responsive design -->
+  <title>Novelle di Boccaccio</title> <!-- Titolo della pagina -->
+
+  <!-- Metadati per SEO -->
+  <!-- Descrizione della pagina per i motori di ricerca -->
+  <meta name="description" content="Il sito delle novelle di Boccaccio">
+  <!-- Parole chiave per l'indicizzazione SEO -->
+  <meta name="keywords" content="boccaccio, novelle di boccaccio, decameron"> 
+  <!-- Autore del sito web -->
+  <meta name="author" content="Giulia Lissandrini"> 
+
+  <!-- Collega il foglio di stile Bootstrap -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"> 
+
+  <!-- Collega la libreria di icone Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> 
+
+  <!-- Collega il foglio di stile CSS personalizzato -->
   <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
-  <!-- Navbar -->
+
+  <!-- ================= NAVBAR ================= -->
+  <!-- Barra di navigazione principale -->
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
     <div class="container-fluid">
+
+      <!-- Logo / nome del sito -->
       <a class="navbar-brand" href="index.html">Boccaccio Novelle</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+
+      <!-- Pulsante hamburger per dispositivi piccoli -->
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
         <span class="navbar-toggler-icon"></span>
       </button>
+
+      <!-- Menu di navigazione -->
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav ms-auto">
-          <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
           <li class="nav-item"><a class="nav-link" href="##">Decameron</a></li>
-          <li class="nav-item"><a class="nav-link" href="novelle.html">Novelle</a></li>
+          <li class="nav-item"><a class="nav-link active" href="novelle.html">Novelle</a></li>
           <li class="nav-item"><a class="nav-link" href="##">Narratori</a></li>
           <li class="nav-item"><a class="nav-link" href="dati.html">Dati</a></li>
-          <!---<li class="nav-item"><a class="nav-link" href="#contatti">Contatti</a></li>--->
         </ul>
       </div>
     </div>
   </nav>
 
+  <!-- ================= BREADCRUMB ================= -->
+  <!-- Percorso di navigazione -->
   <nav aria-label="breadcrumb" id="breadcrumb-nav">
     <div class="container-fluid text-center">
       <ol class="breadcrumb">
@@ -38,32 +66,42 @@
     </div>
   </nav>
 
-  <!-- Intro -->
+  <!-- ================= INTRO ================= -->
+  <!-- Sezione introduttiva -->
   <div class="container my-5">
     <div class="intro">
+      <!-- Titolo principale della sezione -->
       <h1>Tutte le novelle</h1>
+
+      <!-- Paragrafo con Testo descrittivo -->
       <p>
-        Boccaccio racconta di una brigata di dieci giovani amici (sette ragazze e tre ragazzi) di elevata condizione sociale che fuggono dalla città di Firenze colpita dalla peste del 1348. Per trascorrere il tempo oltre ad altre attività come canti e balli decidono di narrare, secondo delle regole rigide, delle novelle. <br> <br>
-        Ogni giorno, a turno, viene eletto un re o una regina, che fissa il tema della giornata al quale tutti dovranno ispirarsi per i loro racconti (tranne Dioneo a cui, essendo giovane, è permesso di non rispettare il tema stabilito). Solo la prima e la nona giornata hanno un tema libero per tutti.<br>
-        [Quindi sono 10 giovani che raccontano ciascuno una novella al giorno (10 giornate)=100 novelle. Ogni giorno c’è un re/regina che sceglie il tema]
+        Boccaccio racconta di una brigata di dieci giovani amici che, durante la peste del 1348,
+        si rifugiano fuori Firenze e raccontano novelle secondo regole precise.
+        <br><br>
+        Ogni giornata ha un re o una regina che sceglie il tema.
+        <br>
+        [10 narratori × 10 giornate = 100 novelle]
       </p>
     </div>
   </div>
 
-
-  <!-- Opere in evidenza -->
+  <!-- ================= SEZIONE NOVELLE ================= -->
+  <!-- Contenitore principale delle opere -->
   <div class="container mb-5" id="opere">
     <div class="row">
+
+      <!-- ================= FILTRI DI RICERCA ================= -->
       <div class="col-sm-12">
-        <!-- ricerca per:
-            text titolo, select giornata, select tema
-        -->
+        <!-- Form per la ricerca delle novelle -->
         <form class="mb-4" id="searchForm">
           <div class="row g-2 align-items-end">
+            <!-- Ricerca per titolo -->
             <div class="col-12 col-md-4">
               <label for="searchTitolo" class="form-label">Titolo</label>
               <input type="text" class="form-control" id="searchTitolo" name="titolo" placeholder="Cerca per titolo">
             </div>
+
+            <!-- Filtro per giornata -->
             <div class="col-6 col-md-2">
               <label for="searchGiornata" class="form-label">Giornata</label>
               <select class="form-select" id="searchGiornata" name="giornata">
@@ -80,6 +118,8 @@
                 <option value="10">Giornata X</option>
               </select>
             </div>
+
+            <!-- Filtro per narratore -->
             <div class="col-6 col-md-2">
               <label for="searchTema" class="form-label">Narratore</label>
               <select class="form-select" id="searchTema" name="tema">
@@ -96,6 +136,8 @@
                 <option value="Panfilo">Panfilo</option>
               </select>
             </div>
+
+            <!-- Filtro per tema -->
             <div class="col-12 col-md-2">
               <label for="searchTema" class="form-label">Tema</label>
               <select class="form-select" id="searchTema" name="tema">
@@ -111,45 +153,49 @@
                 <option value="Tema Libero">Tema Libero</option>
               </select>
             </div>
+
+            <!-- Pulsante di ricerca -->
             <div class="col-12 col-md-2 d-grid">
               <button type="submit" class="btn btn-primary">Cerca</button>
             </div>
           </div>
         </form>
-        
-        
-
-        <!-- <div class="mb-4 text-center">
-          <a href="##" class="badge text-bg-secondary">GIORNATA I</a>
-          <a href="##" class="badge text-bg-secondary">GIORNATA II</a>
-          <a href="##" class="badge text-bg-secondary">GIORNATA III</a>
-          <a href="##" class="badge text-bg-secondary">GIORNATA IV</a>
-          <a href="##" class="badge text-bg-secondary">GIORNATA V</a>
-          <a href="##" class="badge text-bg-secondary">GIORNATA VI</a>
-          <a href="##" class="badge text-bg-secondary">GIORNATA VII</a>
-          <a href="##" class="badge text-bg-secondary">GIORNATA VIII</a>
-          <a href="##" class="badge text-bg-secondary">GIORNATA IX</a>
-          <a href="##" class="badge text-bg-secondary">GIORNATA X</a>
-        </div> -->
       </div>
+
+      <!-- ================= CARD DELLE NOVELLE ================= -->
       <div class="col-sm-12">
         <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-5 featured-works">
-          <!-- Opere placeholder -->
-          <div class="col mb-5">        
+
+          <!-- Singola card di una novella -->
+          <div class="col mb-5">
+
+              <!-- Card Bootstrap a tutta altezza -->        
               <div class="card h-100">
+                  <!-- Immagine della novella -->
                   <a href="novella.html"><img src="https://placehold.co/400x250/364652/ffffff/?text=Ser+Ciappelletto" class="card-img-top" alt="Ser Ciappelletto"></a>
+
+                  <!-- Corpo della card -->
                   <div class="card-body">
+
                   <a href="novella.html">
+                    <!-- Informazioni su giornata e tema -->
                     <h6 class="card-subtitle mb-2 text-muted">
                       <span class="badge text-bg-secondary">GIORNATA I</span>
                       <span class="badge text-bg-secondary">TEMA LIBERO</span>
                     </h6>
+
+                    <!-- Titolo della novella -->
                     <h5 class="card-title">Ser Ciappelletto</h5>
+
+                    <!-- Breve descrizione -->
                     <p class="card-text">Testo descrittivo placeholder della novella Ser Ciappelletto.</p>
                   </a>
                 </div>
               </div>
           </div>
+
+          <!-- (le altre card seguono la stessa struttura) -->
+
           <div class="col mb-5">
             <div class="card h-100">
               <a href="##"><img src="https://placehold.co/400x250/364652/ffffff/?text=Abraam+giudeo" class="card-img-top" alt="Abraam giudeo"></a>
@@ -384,6 +430,9 @@
       </div>
     </div>    
   </div>
+
+  <!-- ================= PAGINAZIONE ================= -->
+  <!-- Navigazione tra le pagine -->
   <div class="container">
     <div class="row">
       <div class="col-sm-12">
@@ -408,14 +457,23 @@
       </div>
     </div>
 
-  <!-- Footer -->
+  <!-- ================= FOOTER ================= -->
   <footer class="text-center">
+
+    <!-- Contenitore del contenuto del footer -->
     <div class="container">
-      <a href="##" class="footer">Credits</a> | <a href="project.html" class="footer">Web Project Plan</a>
+
+      <!-- Link informativi -->
+      <a href="##" class="footer">Credits</a> |
+      <a href="project.html" class="footer">Web Project Plan</a>
+
+      <!-- Testo di copyright -->
       <p>&copy; 2026 Novelle di Boccaccio. Tutti i diritti riservati.</p>
+
     </div>
   </footer>
 
+  <!-- Inclusione del file JavaScript di Bootstrap per il funzionamento dei componenti interattivi -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

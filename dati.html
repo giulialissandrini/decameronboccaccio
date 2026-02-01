@@ -3,7 +3,10 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Novelle di Boccaccio</title>
+  <title>Dati | Novelle di Boccaccio</title>
+  <meta name="description" content="Il sito delle novelle di Boccaccio">
+  <meta name="keywords" content="boccaccio, novelle di boccaccio, decameron">
+  <meta name="author" content="Giulia Lissandrini">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="css/style.css">
@@ -18,11 +21,11 @@
       </button>
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav ms-auto">
-          <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
           <li class="nav-item"><a class="nav-link" href="##">Decameron</a></li>
           <li class="nav-item"><a class="nav-link" href="novelle.html">Novelle</a></li>
           <li class="nav-item"><a class="nav-link" href="##">Narratori</a></li>
-          <li class="nav-item"><a class="nav-link" href="dati.html">Dati</a></li>
+          <li class="nav-item"><a class="nav-link active" href="dati.html">Dati</a></li>
           <!---<li class="nav-item"><a class="nav-link" href="#contatti">Contatti</a></li>--->
         </ul>
       </div>
@@ -38,58 +41,78 @@
     </div>
   </nav>
 
-   <!-- Intro -->
+   <!-- Sezione principale della pagina Dati -->
     <div class="container my-5">
       <div class="intro">
+        <!-- Titolo della sezione -->
         <h1>Dati</h1>
         <br>
+        <!-- Pulsante per scaricare il file CSV con tutte le novelle -->
         <a href="decameron_tutte_le_100_novelle.csv" class="btn btn-primary" target="_blank">
               <i class="fa fa-external-link"></i> Scarica i dati in CSV
         </a>
         <br><br>
-        <table class="table table-striped">
-        <thead>
-          <!-- intestazioni -->
-          
-        </thead>
-        <tbody id="table-body"></tbody>
-      </table>
+        <!-- Tabella Bootstrap per visualizzare i dati -->
+        <div class="table-responsive">
+          <table class="table table-striped">
+          <thead>
+             <tr>
+              <th scope="col">Giornata</th>       <!-- Numero della giornata (I, II, III...) -->
+              <th scope="col">Tema</th>           <!-- Tema della novella (es. Amori felici, Fortuna...) -->
+              <th scope="col">Narratore</th>      <!-- Nome del narratore (es. Dioneo, Pampinea...) -->
+              <th scope="col">Novella</th>        <!-- Titolo della novella -->
+              <th scope="col">Personaggi</th>     <!-- Personaggi principali della novella -->
+              <th scope="col">Luoghi</th>         <!-- Luoghi in cui si svolge la novella -->
+            </tr>
+          </thead>
+          <tbody id="table-body"></tbody>
+        </table>
+      </div>
       </div>
     </div>   
 
-  <!-- Footer -->
+  <!-- Footer della pagina -->
   <footer class="text-center">
     <div class="container">
       <a href="##" class="footer">Credits</a> | <a href="project.html" class="footer">Web Project Plan</a>
       <p>&copy; 2026 Novelle di Boccaccio. Tutti i diritti riservati.</p>
     </div>
   </footer>
+
+  <!-- Script Bootstrap -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Script PapaParse per leggere file CSV -->
   <script src="https://cdn.jsdelivr.net/npm/papaparse@5.4.1/papaparse.min.js"></script>
+
+
   <script>
-  Papa.parse("decameron_tutte_le_100_novelle.csv", {
-    download: true,
-    header: true,
-    delimiter: ";",
-    skipEmptyLines: true,
-    transformHeader: function(header) {
-      return header.trim().replace(/^\uFEFF/, "");
-    },
-    complete: function(results) {
-      const tbody = document.getElementById("table-body");
-      results.data.forEach(row => {
-        tbody.innerHTML += `
-          <tr>
-            <td>${row.Giornata}</td>
-            <td>${row.Tema}</td>
-            <td>${row.Narratore}</td>
-            <td>${row.Novella}</td>
-            <td>${row.Personaggi}</td>
-            <td>${row.Luoghi}</td>
-          </tr>`;
-      });
-    }
-  });
+    // Lettura del file CSV con PapaParse
+    Papa.parse("decameron_tutte_le_100_novelle.csv", {
+      download: true,        // Scarica il file CSV dal server
+      header: true,          // Usa la prima riga come intestazioni delle colonne
+      delimiter: ";",        // Separatore del CSV
+      skipEmptyLines: true,  // Salta eventuali righe vuote
+      transformHeader: function(header) { 
+        // Pulisce eventuali spazi o caratteri BOM nell'intestazione
+        return header.trim().replace(/^\uFEFF/, "");
+      },
+      complete: function(results) {
+        // Popola dinamicamente il corpo della tabella con i dati del CSV
+        const tbody = document.getElementById("table-body");
+        results.data.forEach(row => {
+          tbody.innerHTML += `
+            <tr>
+              <td>${row.Giornata}</td>
+              <td>${row.Tema}</td>
+              <td>${row.Narratore}</td>
+              <td>${row.Novella}</td>
+              <td>${row.Personaggi}</td>
+              <td>${row.Luoghi}</td>
+            </tr>`;
+        });
+      }
+    });
   </script>
 </body>
 </html>

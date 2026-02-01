@@ -1,69 +1,122 @@
 ﻿<!DOCTYPE html>
+<!-- Dichiarazione del tipo di documento HTML5 -->
 <html lang="it">
+<!-- Inizio documento HTML con lingua italiana -->
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Novelle di Boccaccio</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <!-- Metadati di base -->
+  <meta charset="UTF-8"> <!-- Codifica dei caratteri -->
+  <meta name="viewport" content="width=device-width, initial-scale=1"> <!-- Responsive design -->
+  <title>Novelle di Boccaccio</title> <!-- Titolo della pagina -->
+
+  <!-- Metadati per SEO -->
+  <!-- Descrizione della pagina per i motori di ricerca -->
+  <meta name="description" content="Il sito delle novelle di Boccaccio">
+  <!-- Parole chiave per l'indicizzazione SEO -->
+  <meta name="keywords" content="boccaccio, novelle di boccaccio, decameron"> 
+  <!-- Autore del sito web -->
+  <meta name="author" content="Giulia Lissandrini"> 
+
+  <!-- Collega il foglio di stile Bootstrap -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"> 
+
+  <!-- Collega la libreria di icone Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> 
+
+  <!-- Collega il foglio di stile CSS personalizzato -->
   <link rel="stylesheet" href="css/style.css">
+
 </head>
 <body>
-  <!-- Navbar -->
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  
+  <!-- ================= NAVBAR ================= -->
+  <!-- Barra di navigazione Bootstrap, scura e responsive -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark"> 
+    <!-- Contenitore fluido che occupa tutta la larghezza -->
     <div class="container-fluid">
-      <a class="navbar-brand" href="index.html">Boccaccio Novelle</a>
+      <!-- Logo/titolo del sito con link alla home -->
+      <a class="navbar-brand" href="index.html">Boccaccio Novelle</a>   
+
+      <!-- Pulsante per aprire/chiudere il menu su schermi piccoli -->    
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
+        <!-- Icona del menu hamburger -->
+        <span class="navbar-toggler-icon"></span> 
       </button>
+      
+      <!-- Sezione del menu che si espande o si chiude -->
       <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav ms-auto">
-          <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
+
+        <!-- Lista delle voci di menu allineata a destra -->
+        <ul class="navbar-nav ms-auto">          
+          <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li> 
           <li class="nav-item"><a class="nav-link" href="##">Decameron</a></li>
           <li class="nav-item"><a class="nav-link" href="novelle.html">Novelle</a></li>
           <li class="nav-item"><a class="nav-link" href="##">Narratori</a></li>
-          <li class="nav-item"><a class="nav-link" href="dati.html">Dati</a></li>
-          <!---<li class="nav-item"><a class="nav-link" href="#contatti">Contatti</a></li>--->
+          <li class="nav-item"><a class="nav-link" href="dati.html">Dati</a></li>        
         </ul>
       </div>
     </div>
   </nav>
-  <!-- Carousel -->
+
+  
+  <!-- Carousel Bootstrap per la presentazione di alcuni contenuti -->
   <div id="carouselNovelle" class="carousel slide" data-bs-ride="carousel">
+
+    <!-- Contenitore delle slide -->
     <div class="carousel-inner">
+
+      <!-- Prima slide (attiva all'avvio) -->
       <div class="carousel-item active">
         <img src="https://placehold.co/1300x500/7B0828/ffffff/png?text=Giovanni Boccaccio" class="d-block w-100" alt="Boccaccio e Fiammetta">
+        <!-- Testo sovrapposto all'immagine -->
         <div class="carousel-caption d-none d-md-block">
           <h2>Il grande narratore del Trecento</h2>
         </div>
       </div>
+
+      <!-- Seconda slide -->
       <div class="carousel-item">
         <img src="https://placehold.co/1300x500/7B0828/ffffff/png?text=Il Decameron" class="d-block w-100" alt="Manoscritto del Decameron">
         <div class="carousel-caption d-none d-md-block">
           <h2>Capolavoro della letteratura italiana</h2>
         </div>
       </div>
+
+      <!-- Terza slide -->
       <div class="carousel-item">
         <img src="https://placehold.co/1300x500/7B0828/ffffff/png?text=Novelle immortali" class="d-block w-100" alt="Pagina del Decameron">
         <div class="carousel-caption d-none d-md-block">
           <h2>Racconti di vita, amore e ingegno</h2>
         </div>
       </div>
+
     </div>
+
+    <!-- Pulsante per tornare alla slide precedente -->
     <button class="carousel-control-prev" type="button" data-bs-target="#carouselNovelle" data-bs-slide="prev">
       <span class="carousel-control-prev-icon" aria-hidden="true"></span>
       <span class="visually-hidden">Precedente</span>
     </button>
+
+    <!-- Pulsante per passare alla slide successiva -->
     <button class="carousel-control-next" type="button" data-bs-target="#carouselNovelle" data-bs-slide="next">
       <span class="carousel-control-next-icon" aria-hidden="true"></span>
       <span class="visually-hidden">Successivo</span>
     </button>
+
   </div>
 
   <!-- Intro -->
+  <!-- Contenitore Bootstrap -->
   <div class="container my-5">
+
+    <!-- Sezione introduttiva del contenuto -->
     <div class="intro">
+
+      <!-- Titolo principale della sezione -->
       <h1>Il Decameron, il capolavoro di Boccaccio</h1>
+
+      <!-- Paragrafo con Testo descrittivo sull'opera -->
       <p>
         Il <b>Decameron</b> è una raccolta di cento novelle scritte da Giovanni Boccaccio <b>tra il 1349 e il 1353</b>. <br>
         È considerata una delle opere più importanti della letteratura del Trecento europeo infatti influenzò 
@@ -73,70 +126,138 @@
         dell’amor cortese alla magnanimità e la liberalità con i valori della mercatura come l'intelligenza, 
         l'intraprendenza, l'astuzia.
         <br><br>
-        <a href="##" class="btn btn-primary" target="_blank">
-              Scopri di più
+
+        <!-- Pulsante che rimanda alla pagina di approfondimento dell'opera -->
+        <a href="##" class="btn btn-primary">
+          Scopri di più
         </a>
       </p>
+
     </div>
   </div>
 
-  <!-- Opere in evidenza -->
+  <!-- ================= SEZIONE NOVELLE ================= -->
+  <!-- Sezione che contiene le novelle in evidenza -->
   <div class="container mb-5" id="opere">
-    <h2 class="mb-4">Novelle del giorno</h2>
-    <div class="row featured-works">
-      <!-- Opere placeholder -->
-      <div class="col-md-4 mb-4">        
-          <div class="card h-100">
-              <a href="##"></a><img src="https://placehold.co/400x250/364652/ffffff/?text=Andreuccio+da+Perugia" class="card-img-top" alt="Andreuccio da Perugia"></a>
-              <div class="card-body">
-              <a href="">
-                <h6 class="card-subtitle mb-2 text-muted">
-                  <span class="badge text-bg-secondary">GIORNATA II</span> <span class="badge text-bg-secondary">TEMA LIBERO</span>
-                </h6>
-                <h5 class="card-title">Andreuccio da Perugia</h5>
-                <p class="card-text">Le disavventure di Andreuccio, tra inganni e colpi di scena, nella Napoli medievale.</p>
+
+        <!-- Titolo della sezione -->
+        <h2 class="mb-4">Novelle del giorno</h2>
+
+        <!-- Riga Bootstrap che contiene le card -->
+        <div class="row featured-works">
+
+          <!-- Prima novella -->
+          <div class="col-md-4 mb-4">        
+            <!-- Card Bootstrap a tutta altezza -->
+            <div class="card h-100">
+
+              <!-- Immagine della novella -->
+              <a href="##">
+                <img src="https://placehold.co/400x250/364652/ffffff/?text=Andreuccio+da+Perugia" class="card-img-top" alt="Andreuccio da Perugia">
               </a>
+
+              <!-- Corpo della card -->
+              <div class="card-body">
+                <a href="##">
+                  <!-- Informazioni su giornata e tema -->
+                  <h6 class="card-subtitle mb-2 text-muted">
+                    <span class="badge text-bg-secondary">GIORNATA II</span>
+                    <span class="badge text-bg-secondary">TEMA LIBERO</span>
+                  </h6>
+
+                  <!-- Titolo della novella -->
+                  <h5 class="card-title">Andreuccio da Perugia</h5>
+
+                  <!-- Breve descrizione -->
+                  <p class="card-text">
+                    Le disavventure di Andreuccio, tra inganni e colpi di scena, nella Napoli medievale.
+                  </p>
+                </a>
+              </div>
+
             </div>
           </div>
-      </div>
-      <div class="col-md-4 mb-4">
-        <div class="card h-100">
-           <a href="##"><img src="https://placehold.co/400x250/364652/ffffff/?text=Chichibio+e+la+gru" class="card-img-top" alt="Chichibio e la gru"></a>
-          <div class="card-body">
-            <a href="">
-              <h6 class="card-subtitle mb-2 text-muted"><span class="badge text-bg-secondary">GIORNATA VI</span> <span class="badge text-bg-secondary">AMORI INFELICI</span></h6>
-              <h5 class="card-title">Chichibio e la gru</h5>
-              <p class="card-text">L'astuzia di Chichibio salva il cuoco da una situazione imbarazzante con il suo padrone.</p>
+
+          <!-- Seconda novella -->
+          <div class="col-md-4 mb-4">
+            <div class="card h-100">
+
+              <!-- Immagine della novella -->
+              <a href="##">
+                <img src="https://placehold.co/400x250/364652/ffffff/?text=Chichibio+e+la+gru" class="card-img-top" alt="Chichibio e la gru">
+              </a>
+
+              <!-- Corpo della card -->
+              <div class="card-body">
+                <a href="">
+                  <h6 class="card-subtitle mb-2 text-muted">
+                    <span class="badge text-bg-secondary">GIORNATA VI</span>
+                    <span class="badge text-bg-secondary">AMORI INFELICI</span>
+                  </h6>
+                  <h5 class="card-title">Chichibio e la gru</h5>
+                  <p class="card-text">
+                    L'astuzia di Chichibio salva il cuoco da una situazione imbarazzante con il suo padrone.
+                  </p>
+                </a>
+              </div>
+
+            </div>
+          </div>
+
+          <!-- Terza novella -->
+          <div class="col-md-4 mb-4">
+            <div class="card h-100">
+
+              <!-- Immagine della novella -->
+              <a href="##">
+                <img src="https://placehold.co/400x250/364652/ffffff/?text=Federigo+degli+Alberighi" class="card-img-top" alt="Federigo degli Alberighi">
+              </a>
+
+              <!-- Corpo della card -->
+              <div class="card-body">
+                <a href="">
+                  <h6 class="card-subtitle mb-2 text-muted">
+                    <span class="badge text-bg-secondary">GIORNATA V</span>
+                    <span class="badge text-bg-secondary">AMORI FELICI</span>
+                  </h6>
+                  <h5 class="card-title">Federigo degli Alberighi</h5>
+                  <p class="card-text">
+                    Il sacrificio di Federigo per amore e la commovente storia del suo falcone.
+                  </p>
+                </a>
+              </div>
+
+            </div>
+          </div>
+
+          <!-- Pulsante per visualizzare tutte le novelle -->
+          <div class="text-center mt-4">
+            <a href="novelle.html" class="btn btn-primary btn-lg">
+              Vedi tutte le novelle
             </a>
           </div>
-        </div>
-      </div>
-      <div class="col-md-4 mb-4">
-        <div class="card h-100">
-          <a href="##"><img src="https://placehold.co/400x250/364652/ffffff/?text=Federigo+degli+Alberighi" class="card-img-top" alt="Federigo degli Alberighi"></a>
-            <div class="card-body">
-              <a href="">
-              <h6 class="card-subtitle mb-2 text-muted"><span class="badge text-bg-secondary">GIORNATA V</span> <span class="badge text-bg-secondary">AMORI FELICI</span></h6>
-              <h5 class="card-title">Federigo degli Alberighi</h5>
-              <p class="card-text">Il sacrificio di Federigo per amore e la commovente storia del suo falcone.</p>
-              </a>
-            </div>            
-        </div>
-      </div>
-       <div class="text-center mt-4">
-        <a href="novelle.html" class="btn btn-primary btn-lg">Vedi tutte le novelle</a>
-      </div>
-    </div>
-  </div>
 
-  <!-- Footer -->
+        </div>
+    </div>
+
+  <!-- ================= FOOTER ================= -->
   <footer class="text-center">
+
+    <!-- Contenitore del contenuto del footer -->
     <div class="container">
-      <a href="##" class="footer">Credits</a> | <a href="project.html" class="footer">Web Project Plan</a>
+
+      <!-- Link informativi -->
+      <a href="##" class="footer">Credits</a> |
+      <a href="project.html" class="footer">Web Project Plan</a>
+
+      <!-- Testo di copyright -->
       <p>&copy; 2026 Novelle di Boccaccio. Tutti i diritti riservati.</p>
+
     </div>
   </footer>
 
+  <!-- Inclusione del file JavaScript di Bootstrap per il funzionamento dei componenti interattivi -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
 </body>
 </html>

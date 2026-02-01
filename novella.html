@@ -1,34 +1,62 @@
 ﻿<!DOCTYPE html>
+<!-- Dichiarazione del tipo di documento HTML5 -->
 <html lang="it">
+<!-- Inizio documento HTML con lingua italiana -->
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Novelle di Boccaccio</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <!-- Metadati di base -->
+  <meta charset="UTF-8"> <!-- Codifica dei caratteri -->
+  <meta name="viewport" content="width=device-width, initial-scale=1"> <!-- Responsive design -->
+  <title>Ser Ciappelletto | Novelle di Boccaccio</title> <!-- Titolo della pagina -->
+  
+  <!-- Metadati per SEO -->
+  <!-- Descrizione della pagina per i motori di ricerca -->
+  <meta name="description" content="Ser Ciappelletto la prima novella del decameron">
+  <!-- Parole chiave per l'indicizzazione SEO -->
+  <meta name="keywords" content="boccaccio, novelle di boccaccio, decameron,ser ciappelletto">
+  <!-- Autore del sito web -->
+  <meta name="author" content="Giulia Lissandrini">
+
+  <!-- Collega il foglio di stile Bootstrap -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"> 
+
+  <!-- Collega la libreria di icone Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> 
+
+  <!-- Collega il foglio di stile CSS personalizzato -->
   <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
-  <!-- Navbar -->
+
+  <!-- ================= NAVBAR ================= -->
+  <!-- Barra di navigazione principale -->  
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
     <div class="container-fluid">
+
+      <!-- Logo / nome del sito -->
       <a class="navbar-brand" href="index.html">Boccaccio Novelle</a>
+
+      <!-- Pulsante hamburger per dispositivi piccoli -->
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
+
+      <!-- Menu di navigazione -->
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav ms-auto">
-          <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
           <li class="nav-item"><a class="nav-link" href="##">Decameron</a></li>
-          <li class="nav-item"><a class="nav-link" href="novelle.html">Novelle</a></li>
+          <li class="nav-item"><a class="nav-link active" href="novelle.html">Novelle</a></li>
           <li class="nav-item"><a class="nav-link" href="##">Narratori</a></li>
           <li class="nav-item"><a class="nav-link" href="dati.html">Dati</a></li>
-          <!---<li class="nav-item"><a class="nav-link" href="#contatti">Contatti</a></li>--->
         </ul>
       </div>
     </div>
   </nav>
 
+  <!-- ================= BREADCRUMB ================= -->
+  <!-- Percorso di navigazione -->
   <nav aria-label="breadcrumb" id="breadcrumb-nav">
     <div class="container-fluid text-center">
       <ol class="breadcrumb">
@@ -39,28 +67,46 @@
     </div>
   </nav>
 
-  <!-- Intro -->
+
+  <!-- ================= DETTAGLIO NOVELLA ================= -->
+  <!-- Contenitore principale della sezione della novella -->
   <div class="container my-5">
     <div class="row">
       <div class="mb-3">
         <div class="row g-0">
+
+           <!-- Colonna sinistra: immagine della novella e link esterno al testo integrale -->
           <div class="col-md-4 text-center mb-5">
             <img src="https://placehold.co/400x250/364652/ffffff/?text=Ser+Ciappelletto" class="img-fluid rounded-start" alt="Ser Ciappelletto">
             <br><br>
+
+            <!-- Pulsante che rimanda al testo integrale della novella -->
             <a href="http://www.bibliotecaitaliana.it/testo/bibit000267" class="btn btn-primary" target="_blank">
               <i class="fa fa-external-link"></i> Novella integrale
             </a>
           </div>
+
+          <!-- Colonna destra: contenuto testuale della novella -->
           <div class="col-md-8">
+              <!-- Titolo della novella -->
               <h1 class="card-title">Ser Ciappelletto</h1>
+
               <!-- dettagli generali novella -->
               <dl class="row mt-3">
+
+                <!-- Informazioni generali: giornata e tema -->
                 <div class="col-sm-12 mb-3"><span class="badge text-bg-secondary">GIORNATA I</span> <span class="badge text-bg-secondary">TEMA LIBERO</span>
                 </div>
+
+                <!-- Introduzione e contesto della novella -->
                 <div class="mb-4">
                    Il tema della prima giornata è libero e la regina è Pampinea e il narratore è Panfilo. Lo scopo di questa storia è dimostrare come Dio ascolti lo stesso le preghiere dei fedeli nonostante questi si affidino a dei falsi santi. La storia si apre con il mercante francese Musciatto Franzesi che deve lasciare la Francia per l’Italia ma non vuole farlo prima di aver trovato qualcuno che si occupi di riscuotere dei crediti che lui ha presso dei borgognoni, persone veramente di malaffare. Pensa quindi di rivolgersi a Ser Ciappelletto e affidargli l'incarico.
                 </div>
+
+              <!-- Accordion Bootstrap per organizzare i contenuti -->
               <div class="accordion" id="accordionExample">
+
+                <!-- Sezione Accordion: Narratore -->
                 <div class="accordion-item">
                   <h2 class="accordion-header">
                     <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
@@ -75,6 +121,8 @@
                     </div>
                   </div>
                 </div>
+
+                <!-- Sezione Accordion: Trama -->
                 <div class="accordion-item">
                   <h2 class="accordion-header">
                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
@@ -88,6 +136,8 @@ Il problema risiede nel fatto che, qualora Ser Ciappelletto morisse da loro, dov
                     </div>
                   </div>
                 </div>
+
+                <!-- Sezione Accordion: Personaggi -->
                 <div class="accordion-item">
                   <h2 class="accordion-header">
                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
@@ -111,26 +161,34 @@ Che è uno dei personaggi più negativi del Decameron, che spesso è stato messo
   </div>
 
 
-  <!-- Opere in evidenza -->
+  <!-- ================= NOVELLE DELLA STESSA GIORNATA ================= -->
   <div class="container-fluid" id="opere-evidenza">
     <div class="container">
       <div class="row">
+
+        <!-- Titolo della sezione -->
         <div class="col-sm-12">
           <h2 class="mb-4 text-center">Giornata I: le altre novelle</h2>
-        </div>        
+        </div>
+
         <div class="col-sm-12">
           <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-3 featured-works">
-            <!-- Opere placeholder -->
+            
+            <!-- Card prima novella -->
             <div class="col mb-2">
               <div class="card h-100">
                 <div class="card-body">
                   <a href="##">
+                    <!-- Titolo -->
                     <h5 class="card-title">Abraam giudeo</h5>
+                    <!-- descrizione breve -->
                     <p class="card-text">Testo descrittivo placeholder della novella Abraam giudeo.</p>
                   </a>
                 </div>
               </div>
             </div>
+
+            <!-- (le altre card seguono la stessa struttura) -->
             <div class="col mb-2">
               <div class="card h-100">
                   <div class="card-body">
@@ -213,7 +271,9 @@ Che è uno dei personaggi più negativi del Decameron, che spesso è stato messo
             </div>
           </div>
         </div>
-      </div>    
+      </div>
+
+      <!-- Pulsante per visualizzare tutte le novelle -->    
       <div class="text-center mt-4">
         <a href="opere.html" class="btn btn-primary btn-lg">Vedi tutte le opere</a>
       </div>
@@ -222,14 +282,23 @@ Che è uno dei personaggi più negativi del Decameron, che spesso è stato messo
 
    
 
-  <!-- Footer -->
+  <!-- ================= FOOTER ================= -->
   <footer class="text-center">
+
+    <!-- Contenitore del contenuto del footer -->
     <div class="container">
-      <a href="##" class="footer">Credits</a> | <a href="project.html" class="footer">Web Project Plan</a>
+
+      <!-- Link informativi -->
+      <a href="##" class="footer">Credits</a> |
+      <a href="project.html" class="footer">Web Project Plan</a>
+
+      <!-- Testo di copyright -->
       <p>&copy; 2026 Novelle di Boccaccio. Tutti i diritti riservati.</p>
+
     </div>
   </footer>
 
+  <!-- Inclusione del file JavaScript di Bootstrap per il funzionamento dei componenti interattivi -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
