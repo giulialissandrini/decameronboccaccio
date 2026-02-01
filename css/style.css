@@ -1,24 +1,108 @@
-
+/* Import del font Google "Roboto Flex" */
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,wght,XOPQ,XTRA,YOPQ,YTDE,YTFI,YTLC,YTUC@8..144,100..1000,96,468,79,-203,738,514,712&display=swap');
-body { font-family: 'Roboto Flex', sans-serif; background-color: #ffffff; color: #333; }
-body a, .page-link, .page-item{ text-decoration: none; color: #7B0828;}
-.carousel-item img { height: 400px; object-fit: cover; }
-.intro { background: #f8f9fa; padding: 2rem; border-radius: 1rem; }
-.featured-works { min-height: 200px; }
-.card-body a{ text-decoration: none; color: #333}
-.card-body a h5{ color: #7B0828; }
-footer { background: #343a40; color: #fff; padding: 1rem 0; margin-top: 2rem; }
-.text-bg-secondary{background-color: #999799 !important;}
-.btn-primary{background-color: #7B0828 !important; border: none !important;}
 
-#breadcrumb-nav{ background-color: #f8f9fa !important; padding: 10px 10px;  }
-#breadcrumb-nav .breadcrumb { margin-bottom: 0; }
-#breadcrumb-nav .breadcrumb a{ color: #7B0828; }
+/* Stile generale del body: font, colore di sfondo e colore del testo */
+body {
+  font-family: 'Roboto Flex', sans-serif;
+  background-color: #ffffff;
+  color: #333;
+}
 
-#opere-evidenza {background-color: #f8f9fa !important; padding: 50px 0; }
+/* Stile generale dei link */
+body a, .page-link, .page-item {
+  text-decoration: none;
+  color: #7B0828;
+}
 
-.accordion-button{ background-color: #f8f9fa; color: #7B0828; }
-.accordion-button:not(.collapsed) { background-color: #f8f9fa; color: #7B0828; }
-.accordion-body{ background-color: #fff; color: #333; }
+/* Altezza fissa e adattamento delle immagini del carousel */
+.carousel-item img {
+  height: 400px;
+  object-fit: cover;
+}
 
-a.footer {color:#fff !important}
+/* Sezione introduttiva con sfondo chiaro e angoli arrotondati */
+.intro {
+  background: #f8f9fa;
+  padding: 2rem;
+  border-radius: 1rem;
+}
+
+/* Altezza minima della sezione delle opere in evidenza */
+.featured-works {
+  min-height: 200px;
+}
+
+/* Stile dei link all’interno delle card */
+.card-body a {
+  text-decoration: none;
+  color: #333;
+}
+
+/* Colore dei titoli delle card */
+.card-body a h5 {
+  color: #7B0828;
+}
+
+/* Stile del footer */
+footer {
+  background: #343a40;
+  color: #fff;
+  padding: 10px 0;
+  margin-top: 10px;
+}
+
+/* Personalizzazione badge secondari */
+.text-bg-secondary {
+  background-color: #999799 !important;
+}
+
+/* Personalizzazione pulsante primario Bootstrap */
+.btn-primary {
+  background-color: #7B0828 !important;
+  border: none !important;
+}
+
+/* Stile della barra breadcrumb */
+#breadcrumb-nav {
+  background-color: #f8f9fa !important;
+  padding: 10px 10px;
+}
+
+/* Rimozione del margine inferiore del breadcrumb */
+#breadcrumb-nav .breadcrumb {
+  margin-bottom: 0;
+}
+
+/* Colore dei link nel breadcrumb */
+#breadcrumb-nav .breadcrumb a {
+  color: #7B0828;
+}
+
+/* Sezione opere in evidenza */
+#opere-evidenza {
+  background-color: #f8f9fa !important;
+  padding: 50px 0;
+}
+
+/* Stile dei pulsanti dell’accordion */
+.accordion-button {
+  background-color: #f8f9fa;
+  color: #7B0828;
+}
+
+/* Stile dell’accordion quando aperto */
+.accordion-button:not(.collapsed) {
+  background-color: #f8f9fa;
+  color: #7B0828;
+}
+
+/* Corpo dell’accordion */
+.accordion-body {
+  background-color: #fff;
+  color: #333;
+}
+
+/* Stile dei link nel footer */
+a.footer {
+  color: #fff !important;
+}
