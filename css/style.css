@@ -106,3 +106,5 @@ footer {
 a.footer {
   color: #fff !important;
 }
+
+.carousel-caption{ background-color: rgba(0, 0, 0, 0.5); }
