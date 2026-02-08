@@ -117,9 +117,12 @@ Sul web sono presenti già molti siti dedicati al capolavoro di Boccaccio, ma lo
           <i class="fa fa-sitemap me-2"></i> Struttura
         </h2>
         <div class="row text-center">
-          <div class="col-sm-6">
+          <div class="offset-md-2 col-sm-8">
+            <h4>Mappa concettuale</h4><br>
+            <img src="img/mind-maps.png" class="card-img-top" alt="Mind Map">
           </div>
-          <div class="col-sm-6">
+          <div class="offset-md-2 col-sm-8">
+            <h4>Struttura dipendenze</h4><br>
             <img src="img/schema-dipendenze.png" class="card-img-top" alt="Schema Dipendenze">
           </div>
         </div>
@@ -139,10 +142,10 @@ Sul web sono presenti già molti siti dedicati al capolavoro di Boccaccio, ma lo
           <!-- Accordion Bootstrap per organizzare i contenuti -->
               <div class="accordion" id="accordionExample">
 
-                
+                <!--- Home --->
                 <div class="accordion-item">
                   <h2 class="accordion-header">
-                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse1" aria-expanded="true" aria-controls="collapseOne">
+                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse1" aria-expanded="true" aria-controls="collapse1">
                       Home
                     </button>
                   </h2>
@@ -153,16 +156,42 @@ Sul web sono presenti già molti siti dedicati al capolavoro di Boccaccio, ma lo
                             <a href="#" data-bs-toggle="modal" data-bs-target="#imageModal1"><img src="img/home.png" class="card-img-top" alt="Home"></a>
                         </div>
                         <div class="col-md-8">
-                                .....
+                            <h4>Architettura logica</h4>
+                            La homepage rappresenta il punto d'accesso principale al sito da cui si diramano le sezioni di approfondimento dedicate al Decameron, alle singole novelle, ai narratori e ai dati di analisi in cui l’utente può navigare. 
+                            <br><br>
+                            <h4>Layout ed elementi della pagina</h4>
+                            La pagina è progettata con una struttura verticale a scorrimento divisa in blocchi funzionali riconoscibili
+                            <br><br>
+                            <b>Header e navigazione primaria:</b><br>
+                            <ul>
+                              <li>titolo del sito “Boccaccio Novelle” in alto a sinistra</li>
+                              <li>barra di navigazione primaria orizzontale con collegamenti alle sezioni principali: Home (attivo), Decameron, Novelle, Narratori, Dati.</li>
+                            </ul>
+                            Questa barra di navigazione è sempre visibile e consente un accesso diretto ai contenuti principali.
+                            <br><br>
+                            <b>Hero section:</b><br>
+                            <ul><li>carosello di immagini e titolo in evidenza, pensata per attirare l’attenzione e introdurre il tema del sito.</li></ul>
+                            <b>Sezione introduttiva:</b><br>
+                            <ul><li>introduzione dedicata al Decameron con titolo, testo descrittivo e pulsante “Scopri di più” che rimanda alla pagina di approfondimento.</li></ul>
+                            <b>Sezione “Novelle del giorno” organizzata in una griglia a tre colonne:</b><br>
+                              <ul><li>ogni card contiene immagine, tag tematici, titolo e breve descrizione</li>
+                              <li>pulsante “Vedi tutte le novelle” per accedere alla pagina di canale.</li></ul>
+                            <b>Footer:</b><br>
+                            <ul><li>crediti progetto e informazioni copyright </li></ul>
+                            <b>Strumenti di navigazione</b><br>
+                            <ul><li>navigazione primaria </li>
+                            <li>pulsanti di approfondimento</li>
+                            <li>collegamento diretto alle pagine delle singole novelle </li></ul>
                         </div>
                       </div>
                     </div>
                   </div>
                 </div>
 
+                <!--- Elenco Novelle --->
                 <div class="accordion-item">
                   <h2 class="accordion-header">
-                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse2" aria-expanded="true" aria-controls="collapseOne">
+                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse2" aria-expanded="true" aria-controls="collapse2">
                       Elenco novelle
                     </button>
                   </h2>
@@ -173,7 +202,274 @@ Sul web sono presenti già molti siti dedicati al capolavoro di Boccaccio, ma lo
                             <a href="#" data-bs-toggle="modal" data-bs-target="#imageModal2"><img src="img/elenco-novelle.png" class="card-img-top" alt="Elenco Novelle"></a>
                         </div>
                         <div class="col-md-8">
-                                .....
+                            <h4>Architettura logica</h4>
+                            La pagina di catalogo raccoglie l’intero archivio delle novelle e permette all’utente una consultazione ordinata e filtrabile dei contenuti.
+                            <br><br>
+
+                            <h4>Layout ed elementi della pagina</h4>
+                            La pagina è progettata con una struttura verticale a scorrimento divisa in blocchi funzionali riconoscibili.
+                            <br><br>
+
+                            <b>Header e navigazione primaria:</b><br>
+                            <ul>
+                              <li>titolo del sito “Boccaccio Novelle” in alto a sinistra</li>
+                              <li>barra di navigazione primaria orizzontale con collegamenti alle sezioni principali: Home, Decameron, Novelle (attivo), Narratori, Dati.</li>
+                            </ul>
+                            Questa barra di navigazione è sempre visibile e consente un accesso diretto ai contenuti principali.
+                            <br><br>
+
+                            <b>Breadcrumb:</b><br>
+                            <ul>
+                              <li>percorso di navigazione che orienta l’utente all’interno del sito (“Home / Novelle”).</li>
+                            </ul>
+
+                            <b>Sezione introduttiva:</b><br>
+                            <ul>
+                              <li>titolo della pagina</li>
+                              <li>introduzione dedicata alla struttura del Decameron.</li>
+                            </ul>
+
+                            <b>Sezione di filtraggio e ricerca:</b><br>
+                            <ul>
+                              <li>campo di ricerca per titolo</li>
+                              <li>menù a tendina per giornata, narratore e tema</li>
+                              <li>pulsante di conferma “Cerca”.</li>
+                            </ul>
+
+                            <b>Elenco delle novelle disposto a griglia:</b><br>
+                            <ul>
+                              <li>visualizzazione tramite card per facilitare la consultazione rapida</li>
+                              <li>ogni card contiene: immagine, tag tematici, titolo e breve descrizione.</li>
+                            </ul>
+
+                            <b>Paginazione:</b><br>
+                            <ul>
+                              <li>sistema di navigazione numerica con pulsanti avanti/indietro.</li>
+                            </ul>
+
+                            <b>Footer:</b><br>
+                            <ul>
+                              <li>crediti del progetto e informazioni di copyright.</li>
+                            </ul>
+
+                            <b>Strumenti di navigazione:</b><br>
+                            <ul>
+                              <li>navigazione primaria</li>
+                              <li>breadcrumb</li>
+                              <li>filtri del catalogo</li>
+                              <li>paginazione</li>
+                              <li>accesso diretto alla pagina della singola novella.</li>
+                            </ul>
+
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+
+                <!--- Dettaglio Novella --->
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse3" aria-expanded="true" aria-controls="collapse3">
+                      Dettaglio Novella
+                    </button>
+                  </h2>
+                  <div id="collapse3" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                     <div class="row">
+                        <div class="col-md-4">
+                            <a href="#" data-bs-toggle="modal" data-bs-target="#imageModal3"><img src="img/dettaglio-novella.png" class="card-img-top" alt="Dettaglio Novella"></a>
+                        </div>
+                        <div class="col-md-8">
+
+                            <h4>Architettura logica</h4>
+                            La pagina dedicata a una singola novella contiene i dettagli della specifica storia e rappresenta il livello di approfondimento dell’item.
+                            <br><br>
+
+                            <h4>Layout ed elementi della pagina</h4>
+                            La pagina è progettata con una struttura verticale a scorrimento divisa in blocchi funzionali riconoscibili.
+                            <br><br>
+
+                            <b>Header e navigazione primaria:</b><br>
+                            <ul>
+                              <li>titolo del sito “Boccaccio Novelle” in alto a sinistra</li>
+                              <li>barra di navigazione primaria orizzontale con collegamenti alle sezioni principali: Home, Decameron, Novelle (attivo), Narratori, Dati.</li>
+                            </ul>
+                            Questa barra di navigazione è sempre visibile e consente un accesso diretto ai contenuti principali.
+                            <br><br>
+
+                            <b>Breadcrumb:</b><br>
+                            <ul>
+                              <li>percorso di navigazione che orienta l’utente all’interno del sito (“Home / Novelle / Titolo novella”).</li>
+                            </ul>
+
+                            <b>Sezione principale a due colonne:</b><br>
+                            <ul>
+                              <li>a sinistra: immagine rappresentativa e pulsante con collegamento alla novella integrale</li>
+                              <li>a destra: titolo, tag tematici e testo introduttivo, accompagnati da sezioni a scomparsa dedicate a narratore, trama e personaggi.</li>
+                            </ul>
+
+                            <b>Sezione “Giornata XX: le altre novelle”:</b><br>
+                            <ul>
+                              <li>navigazione orizzontale tra le novelle appartenenti alla stessa giornata</li>
+                              <li>griglia di titoli correlati con breve descrizione.</li>
+                            </ul>
+
+                            <b>Footer:</b><br>
+                            <ul>
+                              <li>crediti del progetto e informazioni di copyright.</li>
+                            </ul>
+
+                            <b>Strumenti di navigazione:</b><br>
+                            <ul>
+                              <li>navigazione primaria</li>
+                              <li>breadcrumb</li>
+                              <li>accordion per la consultazione dei contenuti</li>
+                              <li>collegamenti alle novelle correlate per giornata.</li>
+                            </ul>
+
+                            
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!--- Elenco Narratori --->
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse4" aria-expanded="true" aria-controls="collapse4">
+                      Elenco Narratori
+                    </button>
+                  </h2>
+                  <div id="collapse4" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                     <div class="row">
+                        <div class="col-md-4">
+                            <a href="#" data-bs-toggle="modal" data-bs-target="#imageModal4"><img src="img/elenco-narratori.png" class="card-img-top" alt="Elenco Narratori"></a>
+                        </div>
+                        <div class="col-md-8">
+                            <h4>Architettura logica</h4>
+                            La pagina è dedicata ai narratori del <i>Decameron</i> con funzione informativa e di accesso alle rispettive schede di approfondimento.
+                            <br><br>
+
+                            <h4>Layout ed elementi della pagina</h4>
+                            La pagina è progettata con una struttura verticale a scorrimento divisa in blocchi funzionali riconoscibili.
+                            <br><br>
+
+                            <b>Header e navigazione primaria:</b><br>
+                            <ul>
+                              <li>titolo del sito “Boccaccio Novelle” in alto a sinistra</li>
+                              <li>barra di navigazione primaria orizzontale con collegamenti alle sezioni principali: Home, Decameron, Novelle, Narratori (attivo), Dati.</li>
+                            </ul>
+                            Questa barra di navigazione è sempre visibile e consente un accesso diretto ai contenuti principali.
+                            <br><br>
+
+                            <b>Breadcrumb:</b><br>
+                            <ul>
+                              <li>percorso di navigazione che orienta l’utente all’interno del sito (“Home / Narratori”).</li>
+                            </ul>
+
+                            <b>Sezione introduttiva:</b><br>
+                            <ul>
+                              <li>titolo della pagina</li>
+                              <li>introduzione dedicata ai dieci narratori presenti nell’opera.</li>
+                            </ul>
+
+                            <b>Sezione di filtraggio e ricerca:</b><br>
+                            <ul>
+                              <li>menù a tendina per la selezione del narratore</li>
+                              <li>pulsante di conferma “Cerca”.</li>
+                            </ul>
+
+                            <b>Elenco dei narratori disposto a griglia:</b><br>
+                            <ul>
+                              <li>visualizzazione tramite card per facilitare la consultazione rapida</li>
+                              <li>ogni card contiene: immagine, nome del narratore e breve descrizione.</li>
+                            </ul>
+
+                            <b>Footer:</b><br>
+                            <ul>
+                              <li>crediti del progetto e informazioni di copyright.</li>
+                            </ul>
+
+                            <b>Strumenti di navigazione:</b><br>
+                            <ul>
+                              <li>navigazione primaria</li>
+                              <li>breadcrumb</li>
+                              <li>filtro dei narratori</li>
+                              <li>accesso diretto alla pagina del singolo narratore.</li>
+                            </ul>
+
+
+                            
+
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                 <!--- Dettaglio Narratore --->
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse5" aria-expanded="true" aria-controls="collapse5">
+                      Dettaglio Narratore
+                    </button>
+                  </h2>
+                  <div id="collapse5" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                     <div class="row">
+                        <div class="col-md-4">
+                            <a href="#" data-bs-toggle="modal" data-bs-target="#imageModal5"><img src="img/dettaglio-narratore.png" class="card-img-top" alt="Dettaglio Narratore"></a>
+                        </div>
+                        <div class="col-md-8">
+                            
+                            <h4>Architettura logica</h4>
+                            La pagina dedicata a un narratore specifico rappresenta un approfondimento tematico e mette in relazione il narratore con le novelle da lui raccontate nel corso delle diverse giornate.
+                            <br><br>
+
+                            <h4>Layout ed elementi della pagina</h4>
+                            La pagina è progettata con una struttura verticale a scorrimento divisa in blocchi funzionali riconoscibili.
+                            <br><br>
+
+                            <b>Header e navigazione primaria:</b><br>
+                            <ul>
+                              <li>titolo del sito “Boccaccio Novelle” in alto a sinistra</li>
+                              <li>barra di navigazione primaria orizzontale con collegamenti alle sezioni principali: Home, Decameron, Novelle, Narratori (attivo), Dati.</li>
+                            </ul>
+                            Questa barra di navigazione è sempre visibile e consente un accesso diretto ai contenuti principali.
+                            <br><br>
+
+                            <b>Breadcrumb:</b><br>
+                            <ul>
+                              <li>percorso di navigazione che orienta l’utente all’interno del sito (“Home / Narratori / Nome narratore”).</li>
+                            </ul>
+
+                            <b>Sezione introduttiva:</b><br>
+                            <ul>
+                              <li>titolo della pagina corrispondente al nome del narratore</li>
+                              <li>introduzione dedicata al narratore e all’insieme delle novelle da lui raccontate.</li>
+                            </ul>
+
+                            <b>Elenco delle novelle disposto a griglia:</b><br>
+                            <ul>
+                              <li>visualizzazione tramite card per facilitare la consultazione rapida</li>
+                              <li>ogni card contiene: titolo e breve descrizione.</li>
+                            </ul>
+
+                            <b>Footer:</b><br>
+                            <ul>
+                              <li>crediti del progetto e informazioni di copyright.</li>
+                            </ul>
+
+                            <b>Strumenti di navigazione:</b><br>
+                            <ul>
+                              <li>navigazione primaria</li>
+                              <li>breadcrumb</li>
+                              <li>collegamenti alle novelle correlate per narratore.</li>
+                            </ul>
                         </div>
                       </div>
                     </div>
@@ -231,21 +527,63 @@ Sul web sono presenti già molti siti dedicati al capolavoro di Boccaccio, ma lo
           <i class="fa fa-cogs me-2"></i> Servizi
         </h2>
         <div class="row">
-          <div class="col-md-4 mb-3">
-            <div class="alert alert-secondary text-center">
-              Consultazione delle novelle
+          <div class="col-md-12 mb-3">
+            Per facilitare la navigazione e la consultazione da parte dell’utente il sito offre diversi servizi e strumenti specifici. 
+          </div>
+          <div class="col-md-12 mb-1">
+            <div class="alert alert-secondary">
+              <b>Strumenti di navigazione primaria e briciole di pane:</b><br>
+               sono presenti in tutte le pagine per aiutare l’utente a orientarsi facilmente e a comprendere la propria posizione all’interno della struttura del sito.
             </div>
           </div>
-          <div class="col-md-4 mb-3">
-            <div class="alert alert-secondary text-center">
-              Visualizzazione dei dati
+          <div class="col-md-12 mb-1">
+            <div class="alert alert-secondary">
+              <b>Sistema di ricerca tramite filtri</b><br>
+              consente di esplorare le novelle del catalogo in base a criteri specifici come giornata, tema, narratore e titolo. Il sistema permette un accesso non lineare ai contenuti favorendo una consultazione mirata e personalizzata rispetto alle esigenze del visitatore.
             </div>
           </div>
-          <div class="col-md-4 mb-3">
-            <div class="alert alert-secondary text-center">
-              Navigazione tematica
+          <div class="col-md-12 mb-1">
+            <div class="alert alert-secondary">
+              <b>Sistema di dropdown nei filtri</b><br>
+              i filtri sono organizzati con un menù a discesa per rendere più chiara e ordinata la selezione dei criteri. L’utente può scegliere facilmente uno o più parametri e quindi visualizzare solo le novelle corrispondenti alla combinazione selezionata.
             </div>
           </div>
+
+          <div class="col-md-12 mb-1">
+            <div class="alert alert-secondary">
+              <b>Collegamente diretto a risorse esterne autorevoli</b><br>
+              ogni novella include un collegamento diretto alla Biblioteca Italiana in cui si può consultare il testo integrale originale. Questa possibilità offre un importante strumento di studio e lettura.
+            </div>
+          </div>
+
+          <div class="col-md-12 mb-1">
+            <div class="alert alert-secondary">
+              <b>Accordion nel dettaglio della novella</b><br>
+              nella pagina del dettaglio della novella è presente un accordion per la visualizzazione dei contenuti. Le sezioni espandibili permettono all’utente di accedere alle informazioni solo quando desidera approfondire quel determinato contenuto. Il layout rimane pulito e ordinato.
+            </div>
+          </div>
+
+          <div class="col-md-12 mb-1">
+            <div class="alert alert-secondary">
+              <b>Google analytics</b><br>
+              elemento che può essere integrato per raccogliere statistiche dei visitatori come il numero di accessi, le pagine più consultate e la provenienza geografica.
+            </div>
+          </div>
+
+          <div class="col-md-12 mb-1">
+            <div class="alert alert-secondary">
+              <b>Cookiebot</b><br>
+              elemento che può essere integrato per la gestione del consenso degli utenti garantendo così la conformità alla normativa sulla privacy e permettendo all’utente di controllare i propri dati durante la navigazione.
+            </div>
+          </div>
+
+          <div class="col-md-12 mb-1">
+            <div class="alert alert-secondary">
+              <b>Strumenti di supporto allo studio</b><br>
+              in futuro il sito potrà essere arricchito con flashcard e test di autovalutazione utili per lo studio e il ripasso delle novelle.
+            </div>
+          </div>
+
         </div>
       </div>
     </div>
@@ -300,6 +638,48 @@ Sul web sono presenti già molti siti dedicati al capolavoro di Boccaccio, ma lo
       <div class="modal-content">
         <div class="modal-body p-0">
           <img src="img/elenco-novelle.png" class="img-fluid" alt="Zoom Immagine">
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Chiudi</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal immagine dettaglio novella -->
+  <div class="modal fade" id="imageModal3" tabindex="-1" aria-labelledby="imageModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+      <div class="modal-content">
+        <div class="modal-body p-0">
+          <img src="img/dettaglio-novella.png" class="img-fluid" alt="Zoom Immagine">
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Chiudi</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+   <!-- Modal immagine elenco narratori -->
+  <div class="modal fade" id="imageModal4" tabindex="-1" aria-labelledby="imageModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+      <div class="modal-content">
+        <div class="modal-body p-0">
+          <img src="img/elenco-narratori.png" class="img-fluid" alt="Zoom Immagine">
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Chiudi</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal immagine dettaglio narratore -->
+  <div class="modal fade" id="imageModal5" tabindex="-1" aria-labelledby="imageModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+      <div class="modal-content">
+        <div class="modal-body p-0">
+          <img src="img/dettaglio-narratore.png" class="img-fluid" alt="Zoom Immagine">
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Chiudi</button>
